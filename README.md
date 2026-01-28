@@ -1,49 +1,44 @@
-# 💨 Advanced Puff Script for FiveM
+# 💨 Advanced Disposable Vape (Puff) Script for FiveM
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-FiveM-orange.svg)
 
-Un script léger et immersif pour ajouter des **Puffs (vapes jetables)** sur votre serveur FiveM. Ce script inclut des animations, des effets de particules de fumée et une gestion du nombre de bouffées (taffes) limitées.
+A lightweight and immersive script to add **Disposable Vapes (Puffs)** to your FiveM server. This script features custom animations, smoke particle effects, and a hit-limit system.
 
-## ✨ Caractéristiques
+## ✨ Features
 
-* **Système de taffes limité :** Chaque puff a une durée de vie définie. Une fois vide, elle devient inutilisable.
-* **Animations immersives :** Le joueur porte la puff à la bouche avec une animation fluide.
-* **Effets visuels (PTFX) :** Expulsion d'un nuage de fumée réaliste après chaque utilisation.
-* **Optimisé :** Consommation de ressources minimale (0.00ms au repos).
-* **Prêt pour GitHub :** Structure de dossiers propre et facile à installer.
+* **Hit Limit System:** Each vape has a specific number of puffs. Once empty, it becomes unusable.
+* **Immersive Animations:** The player performs a realistic hand-to-mouth animation.
+* **Visual Effects (PTFX):** High-quality smoke particle clouds spawned at the player's mouth.
+* **Optimized:** Minimal resource usage (0.00ms on idle).
+* **Standalone:** Works on any server (ESX, QB-Core, or vMenu).
 
 ## 🛠️ Installation
 
-1.  Téléchargez le dépôt.
-2.  Extrayez le dossier dans votre répertoire `resources` (renommez-le en `v_puff` par exemple).
-3.  Ajoutez la ligne suivante à votre fichier `server.cfg` :
+1.  Download the repository.
+2.  Extract the folder into your `resources` directory (rename it to `v_puff`).
+3.  Add the following line to your `server.cfg`:
     ```lua
     ensure v_puff
     ```
-4.  Relancez votre serveur ou démarrez la ressource manuellement via la console.
+4.  Restart your server or start the resource manually via the console.
 
-## 🚀 Utilisation
+## 🚀 How to use
 
-Par défaut, le script utilise une commande de test. Vous pouvez lier cela à un item d'inventaire facilement.
+By default, the script uses a command for testing purposes. You can easily bind this to an inventory item.
 
-* **Commande :** `/usepuff`
-* **Logique :** * Le joueur déclenche l'animation.
-    * La fumée apparaît après 2 secondes.
-    * Le compteur de taffes diminue dans la mémoire du serveur.
+* **Command:** `/usepuff`
+* **Logic:**
+    * Player triggers the animation.
+    * Smoke appears after 2 seconds.
+    * The puff counter decreases on the server side.
 
-## ⚙️ Configuration (À venir)
-
-Le script est actuellement en version "Standalone". Pour une intégration complète :
-* **ESX :** Utilisez `ESX.RegisterUsableItem`.
-* **QB-Core :** Utilisez `QBCore.Functions.CreateUseableItem`.
-
-## 📂 Structure du projet
+## 📂 Project Structure
 
 ```text
 .
-├── client.lua      # Gestion des animations et particules
-├── server.lua      # Logique de la base de données/taffes
-├── fxmanifest.lua  # Métadonnées FiveM
+├── client.lua      # Handles animations and smoke particles
+├── server.lua      # Handles hit-limit logic and sync
+├── fxmanifest.lua  # FiveM resource metadata
 └── README.md       # Documentation
