@@ -42,3 +42,4 @@ By default, the script uses a command for testing purposes. You can easily bind 
 ├── server.lua      # Handles hit-limit logic and sync
 ├── fxmanifest.lua  # FiveM resource metadata
 └── README.md       # Documentation
+<img width="269" height="126" alt="Capture d&#39;écran 2026-01-28 173620" src="https://github.com/user-attachments/assets/ee0673e0-9304-4744-a3d7-2816482be902" />
