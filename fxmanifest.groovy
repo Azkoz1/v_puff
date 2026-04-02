@@ -3,7 +3,7 @@ fxmanifest.lua
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Arthuxx'
+author 'Azkoz'
 description 'Script de Puff avec limite de taffes'
 version '1.0.0'
 
